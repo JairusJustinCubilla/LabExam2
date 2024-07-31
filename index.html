@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern News Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background:  #343434;
+            color: #fff;
+            padding: 5px 0;
+            border-bottom: 2px solid  #cc0011 ;
+            font-size: 1rem;
+        }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .header .social-links {
+            display: flex;
+            align-items: center;
+        }
+        .header .social-links a {
+            color: #fff;
+            margin-left: 10px;
+            font-size: 1rem;
+        }
+        .header .social-links img {
+            width: 24px;
+            height: 24px;
+        }
+        .featured img {
+            height: 400px;
+            object-fit: cover;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-title {
+            font-size: 1.1rem;
+        }
+        .card-text {
+            color: #6c757d;
+        }
+        .btn-primary {
+            background-color:  #171717 ;
+            border-color:  #171717 ;
+        }
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Jai News</h1>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" />
+                </a>
+                <a href="https://twitter.com" target="_blank" title="Twitter">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row mb-4">
+            <!-- Country Selector -->
+            <div class="col-md-6">
+                <label for="country-select">Select Country:</label>
+                <select id="country-select" class="form-control">
+                    <option value="us">United States</option>
+                    <option value="ph">Philippines</option>
+                    <option value="gb">United Kingdom</option>
+                    <option value="de">Germany</option>
+                    <option value="fr">France</option>
+                </select>
+            </div>
+            <!-- Category Selector -->
+            <div class="col-md-6">
+                <label for="category-select">Select Category:</label>
+                <select id="category-select" class="form-control">
+                    <option value="">All Categories</option>
+                    <option value="sports">Sports</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="business">Business</option>
+                    <option value="health">Health</option>
+                    <option value="science">Science</option>
+                    <option value="technology">Technology</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Featured News Article -->
+            <div class="col-md-8 featured">
+                <div id="featured-news" class="card">
+                    <img src="" id="featured-img" class="card-img-top" alt="Featured Image">
+                    <div class="card-body">
+                        <h5 id="featured-title" class="card-title"></h5>
+                        <p id="featured-description" class="card-text"></p>
+                        <a id="featured-link" class="btn btn-primary" href="#" target="_blank">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Regular News Articles -->
+            <div class="col-md-4">
+                <div id="news" class="row">
+                    <!-- News articles will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
